@@ -178,7 +178,7 @@ def recomendacion_juego(game_id:str, num_recommendations=5):
 
 def recomendacion_usuario(user_id: str, num_recommendations = 5):
     
-    user_id = user_id.capitalize()    
+    #user_id = user_id.capitalize()    
 
     # Filtrar df_usr_data por el user_id específico
     user_games = df_usr_data[df_usr_data['user_id'] == user_id]
