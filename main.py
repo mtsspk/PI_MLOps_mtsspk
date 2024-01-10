@@ -19,7 +19,6 @@ def PlayTimeGenre(genre: str):
 
 @app.get("/UserForGenre")
 def UserForGenre(genre: str):
-    genre = genre.lower()
     return api_functions.UserForGenre(genre) 
 
 
@@ -35,17 +34,14 @@ def UsersWorstDeveloper(posted_year: int):
 
 @app.get("/sentiment_analysis/{developer}")
 def sentiment_analysis(developer: str):
-    developer = developer.lower()
     return api_functions.sentiment_analysis(developer) 
 
 
 @app.get("/recomendacion_juego/{game_id}")
 def recomendacion_juego(game_id: str, num_recommendations: int = 5):
-    game_id = game_id.lower()
     return api_functions.recomendacion_juego(game_id, num_recommendations) 
 
 
 @app.get("/recomendacion_usuario/{user_id}")
 def recomendacion_usuario(user_id: str, num_recommendations: int = 5):
-    user_id = user_id.lower()
     return api_functions.recomendacion_usuario(user_id) 

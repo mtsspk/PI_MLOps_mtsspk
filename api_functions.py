@@ -38,8 +38,9 @@ df_usr_data = pd.read_parquet('Datasets/df_usr_data.parquet')
 
 
 def PlayTimeGenre(genre: str):
-    genre = genre.capitalize()
     
+    genre = genre.capitalize()
+
     # Filtrar el DataFrame por el género proporcionado
     genre_data = df_play_gnr[df_play_gnr['genre'] == genre]
 
@@ -56,6 +57,9 @@ def PlayTimeGenre(genre: str):
 
 
 def UserForGenre(genre: str):
+
+    genre = genre.capitalize()
+
     # Filtrar df_usr_gnr_top por el género proporcionado
     genre_data_top = df_usr_gnr_top[df_usr_gnr_top['genre'] == genre]
 
@@ -117,6 +121,9 @@ def UsersWorstDeveloper(posted_year):
 
 
 def sentiment_analysis(developer: str):
+    
+    developer = developer.capitalize()
+    
     # Filtrar registros con al menos un análisis de sentimiento para el desarrollador proporcionado
     df_filtered = df_dev_sent[(df_dev_sent['total_sentiment'] > 0) & (df_dev_sent['developer'] == developer)]
 
@@ -143,6 +150,8 @@ def sentiment_analysis(developer: str):
     
 
 def recomendacion_juego(game_id:str, num_recommendations=5):
+    
+    game_id = game_id.capitalize()    
 
     game_name = df_games_names.loc[df_games_names['game_id'] == game_id, 'app_name'].values[0]
 
@@ -168,6 +177,9 @@ def recomendacion_juego(game_id:str, num_recommendations=5):
 
 
 def recomendacion_usuario(user_id: str, num_recommendations = 5):
+    
+    user_id = user_id.capitalize()    
+
     # Filtrar df_usr_data por el user_id específico
     user_games = df_usr_data[df_usr_data['user_id'] == user_id]
 
