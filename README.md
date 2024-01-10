@@ -65,10 +65,10 @@ Para seguir el flujo de trabajo se pueden encontrar los notebooks específicos d
 
 
 El contenido vinculado al **deploy de la API** es:
-- [**main.py**](https://github.com/mtsspk/PI_MLOps_mtsspk/blob/main/main.py)
+- [**main.py**](https://github.com/mtsspk/PI_MLOps_mtsspk/blob/main/main.py). Es el punto de entrada a la API. Desde main.py se importa el archivo api_functions.py, que contiene las funciones que se ejecutaran.
 - [**api_functions.py**](https://github.com/mtsspk/PI_MLOps_mtsspk/blob/main/api_functions.py)
-- [**requirements.txt**](https://github.com/mtsspk/PI_MLOps_mtsspk/blob/main/requirements.txt)
-- [**Carpeta Datasets**](https://github.com/mtsspk/PI_MLOps_mtsspk/tree/main/Datasets)
+- [**requirements.txt**](https://github.com/mtsspk/PI_MLOps_mtsspk/blob/main/requirements.txt). Refiere a las bibliotecas que se deben importar para la ejecución de la API.
+- [**Carpeta Datasets**](https://github.com/mtsspk/PI_MLOps_mtsspk/tree/main/Datasets). Contiene únicamente los datasets finales que serán consumidos por la API. Por cuestiones de límite de tamaños de archivo en GitHub los datasets intermedios, generados a partir de los originales, sobre los cuales luego se desarrollaron luego los dataset finales, no pudieron ser subidos a la plataforma.
 
 Por otro lado, se puede encontrar el archivo **my_functions.py** que contiene algunas funciones personalizadas que se utilizaron especialmente para el EDA.
 
