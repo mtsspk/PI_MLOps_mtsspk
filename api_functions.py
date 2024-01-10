@@ -38,6 +38,8 @@ df_usr_data = pd.read_parquet('Datasets/df_usr_data.parquet')
 
 
 def PlayTimeGenre(genre: str):
+    genre = genre.capitalize()
+    
     # Filtrar el DataFrame por el género proporcionado
     genre_data = df_play_gnr[df_play_gnr['genre'] == genre]
 

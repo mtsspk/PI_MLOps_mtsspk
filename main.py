@@ -14,7 +14,6 @@ def index():
 
 @app.get("/PlayTimeGenre")
 def PlayTimeGenre(genre: str):
-    genre = genre.lower()
     return api_functions.PlayTimeGenre(genre)
 
 
